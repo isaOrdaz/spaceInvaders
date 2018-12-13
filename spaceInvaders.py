@@ -2,6 +2,7 @@
 import math
 import turtle
 import os
+import random
 
 # Set up the screen
 mainScreen = turtle.Screen()
@@ -34,13 +35,25 @@ player.setheading(90)
 
 playerspeed = 15
 
-# Create invader
-enemy = turtle.Turtle()
-enemy.color("red")
-enemy.shape("circle")
-enemy.penup()
-enemy.speed(0)
-enemy.setposition(-200, 250)
+# Chose a number of enemies
+number_of_enemies = 5
+# Create an empty list of enemies
+enemies = []
+
+# Add enemies to the list
+for i in range(number_of_enemies):
+    # Create the enemy
+    enemies.append(turtle.Turtle())
+
+for enemy in enemies:
+    # Create invader
+    enemy.color("red")
+    enemy.shape("circle")
+    enemy.penup()
+    enemy.speed(0)
+    x = random.randint(-200, 200)
+    y = random.randint(100, 250)
+    enemy.setposition(x, y)
 
 enemyspeed = 2
 
@@ -90,6 +103,7 @@ def fire_bullet():
         bullet.setposition(x, y)
         bullet.showturtle()
 
+
 def isCollision(t1, t2):
     distance = math.sqrt(math.pow(t1.xcor() - t2.xcor(), 2) + math.pow(t1.ycor() - t2.ycor(), 2))
     if distance < 15:
@@ -106,23 +120,41 @@ turtle.onkey(fire_bullet, "space")
 
 # Main game loop
 while True:
-    # move the enemy
-    x = enemy.xcor()
-    x += enemyspeed
-    enemy.setx(x)
+    for enemy in enemies:
+        # move the enemy
+        x = enemy.xcor()
+        x += enemyspeed
+        enemy.setx(x)
 
-    # Move the enemy back and down
-    if enemy.xcor() > 280:
-        y = enemy.ycor()
-        y -= 40
-        enemyspeed *= -1
-        enemy.sety(y)
+        # Move the enemy back and down
+        if enemy.xcor() > 280:
+            y = enemy.ycor()
+            y -= 40
+            enemyspeed *= -1
+            enemy.sety(y)
 
-    if enemy.xcor() < -280:
-        y = enemy.ycor()
-        y -= 40
-        enemyspeed *= -1
-        enemy.sety(y)
+        if enemy.xcor() < -280:
+            y = enemy.ycor()
+            y -= 40
+            enemyspeed *= -1
+            enemy.sety(y)
+
+        # Check for a collision between the bullet and the enemy
+        if isCollision(bullet, enemy):
+            # Reset the bullet
+            bullet.hideturtle()
+            bulletstate = "ready"
+            bullet.setposition(0, -400)
+            # Reset the enemy
+            x = random.randint(-200, 200)
+            y = random.randint(100, 250)
+            enemy.setposition(x, y)
+
+        if isCollision(enemy, player):
+            player.hideturtle()
+            enemy.hideturtle()
+            print("Game Over")
+            break
 
     # Move bullet
     if bulletstate == "fire":
@@ -134,20 +166,5 @@ while True:
     if bullet.ycor() > 275:
         bullet.hideturtle()
         bulletstate = "ready"
-
-    # Check for a collision between the bullet and the enemy
-    if isCollision(bullet, enemy):
-        # Reset the bullet
-        bullet.hideturtle()
-        bulletstate = "ready"
-        bullet.setposition(0, -400)
-        # Reset the enemy
-        enemy.setposition(-200, 250)
-
-    if isCollision(enemy, player):
-        player.hideturtle()
-        enemy.hideturtle()
-        print("Game Over")
-        break
 
 mainScreen.exitonclick()
