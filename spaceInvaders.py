@@ -8,7 +8,7 @@ import turtle
 mainScreen = turtle.Screen()
 mainScreen.bgcolor("black")
 mainScreen.title("Space Invaders")
-mainScreen.bgpic("space_invaders_background.gif")
+mainScreen.bgpic("space_invader.png")
 
 # Register the shapes
 turtle.register_shape("invader.gif")
