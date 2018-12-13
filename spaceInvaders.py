@@ -1,5 +1,6 @@
 # Space Invaders
 import math
+import os
 import random
 import turtle
 
@@ -113,6 +114,7 @@ def fire_bullet():
     # Declare bulletstate as a global if it needs changed
     global bulletstate
     if bulletstate == "ready":
+        os.system("afplay laser.wav&")
         bulletstate = "fire"
         # Move bullet to just above player
         x = player.xcor()
@@ -163,6 +165,7 @@ while True:
 
         # Check for a collision between the bullet and the enemy
         if isCollision(bullet, enemy):
+            os.system("afplay explosion.wav&")
             # Reset the bullet
             bullet.hideturtle()
             bulletstate = "ready"
@@ -178,6 +181,7 @@ while True:
             score_pen.write(scorestring, False, align="left", font=("Arial", 14, "normal"))
 
         if isCollision(enemy, player):
+            os.system("afplay explosion.wav&")
             player.hideturtle()
             enemy.hideturtle()
             print("Game Over")
