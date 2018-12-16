@@ -54,7 +54,7 @@ player.setheading(90)
 playerspeed = 15
 
 # Chose a number of enemies
-number_of_enemies = 5
+number_of_enemies = random.randint(5, 10)
 # Create an empty list of enemies
 enemies = []
 
@@ -170,15 +170,17 @@ while True:
             bullet.hideturtle()
             bulletstate = "ready"
             bullet.setposition(0, -400)
-            # Reset the enemy
-            x = random.randint(-200, 200)
-            y = random.randint(100, 250)
-            enemy.setposition(x, y)
+            # Delete enemy and update number
+            number_of_enemies -= 1
+            enemy.hideturtle()
+            enemy_hit = enemies.index(enemy)
+            del enemies[enemy_hit]
             # Update the score
             score += 10
-            scorestring = "Score: %s" %score
+            scorestring = "Score: %s" % score
             score_pen.clear()
             score_pen.write(scorestring, False, align="left", font=("Arial", 14, "normal"))
+
 
         if isCollision(enemy, player):
             os.system("afplay explosion.wav&")

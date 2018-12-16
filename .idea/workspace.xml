@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba5b6106-6168-4e13-9742-290baaf804e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spaceInvaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/spaceInvaders.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,22 +12,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/spaceInvaders$spaceInvaders.coverage" NAME="spaceInvaders Coverage Results" MODIFIED="1544730149201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spaceInvaders$spaceInvaders.coverage" NAME="spaceInvaders Coverage Results" MODIFIED="1544752308923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="500">
+              <caret line="175" column="35" selection-start-line="175" selection-start-column="35" selection-end-line="175" selection-end-column="35" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
-                <marker date="1544730149193" expanded="true" signature="1931:4632" ph="..." />
-                <marker date="1544730149193" expanded="true" signature="2047:2704" ph="..." />
-                <marker date="1544730149193" expanded="true" signature="2162:2167" ph="..." />
-                <marker date="1544730149193" expanded="true" signature="2162:2704" ph="..." />
-                <marker date="1544730149193" expanded="true" signature="2530:2704" ph="..." />
+                <marker date="1545003485546" expanded="true" signature="1951:4653" ph="..." />
+                <marker date="1545003485546" expanded="true" signature="2067:2724" ph="..." />
+                <marker date="1545003485546" expanded="true" signature="2182:2187" ph="..." />
+                <marker date="1545003485546" expanded="true" signature="2182:2724" ph="..." />
+                <marker date="1545003485546" expanded="true" signature="2550:2724" ph="..." />
               </folding>
             </state>
           </provider>
@@ -54,9 +55,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="840" />
     <option name="y" value="23" />
-    <option name="width" value="840" />
+    <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,20 +64,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="spaceInvaders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spaceInvaders" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -141,15 +128,19 @@
       <workItem from="1544579314774" duration="420000" />
       <workItem from="1544720952657" duration="8000" />
       <workItem from="1544720992181" duration="1471000" />
-      <workItem from="1544723805889" duration="2378000" />
+      <workItem from="1544723805889" duration="2479000" />
+      <workItem from="1544739051507" duration="48000" />
+      <workItem from="1544751199891" duration="2505000" />
+      <workItem from="1544996458115" duration="186000" />
+      <workItem from="1545003230919" duration="255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5098000" />
+    <option name="totallyTimeSpent" value="8193000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="23" width="840" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24812031" />
@@ -157,7 +148,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -198,15 +189,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="500">
+          <caret line="175" column="35" selection-start-line="175" selection-start-column="35" selection-end-line="175" selection-end-column="35" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
-            <marker date="1544730149193" expanded="true" signature="1931:4632" ph="..." />
-            <marker date="1544730149193" expanded="true" signature="2047:2704" ph="..." />
-            <marker date="1544730149193" expanded="true" signature="2162:2167" ph="..." />
-            <marker date="1544730149193" expanded="true" signature="2162:2704" ph="..." />
-            <marker date="1544730149193" expanded="true" signature="2530:2704" ph="..." />
+            <marker date="1545003485546" expanded="true" signature="1951:4653" ph="..." />
+            <marker date="1545003485546" expanded="true" signature="2067:2724" ph="..." />
+            <marker date="1545003485546" expanded="true" signature="2182:2187" ph="..." />
+            <marker date="1545003485546" expanded="true" signature="2182:2724" ph="..." />
+            <marker date="1545003485546" expanded="true" signature="2550:2724" ph="..." />
           </folding>
         </state>
       </provider>
