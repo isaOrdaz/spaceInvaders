@@ -29,6 +29,15 @@ for side in range(4):
     border_pen.lt(90)
 border_pen.hideturtle()
 
+# Draw Pen for Win
+game_over_pen = turtle.Turtle()
+game_over_pen.speed(0)
+game_over_pen.color("green")
+game_over_pen.penup()
+game_over_pen.setposition(0,0)
+game_over_pen.hideturtle()
+game_over_string = "You Win"
+
 # Set the score to 0
 score = 0
 
@@ -163,6 +172,7 @@ while True:
             # Change Direction
             enemyspeed *= -1
 
+
         # Check for a collision between the bullet and the enemy
         if isCollision(bullet, enemy):
             os.system("afplay explosion.wav&")
@@ -170,11 +180,17 @@ while True:
             bullet.hideturtle()
             bulletstate = "ready"
             bullet.setposition(0, -400)
-            # Delete enemy and update number
-            number_of_enemies -= 1
-            enemy.hideturtle()
-            enemy_hit = enemies.index(enemy)
-            del enemies[enemy_hit]
+            if number_of_enemies != 0:
+                # Delete enemy and update number
+                number_of_enemies -= 1
+                enemy.hideturtle()
+                enemy_hit = enemies.index(enemy)
+                del enemies[enemy_hit]
+            if number_of_enemies == 0:
+                player.hideturtle()
+                enemy.hideturtle()
+                game_over_pen.write(game_over_string, False, align="center", font=("Arial", 14, "normal"))
+                mainScreen.exitonclick()
             # Update the score
             score += 10
             scorestring = "Score: %s" % score

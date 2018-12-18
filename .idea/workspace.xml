@@ -19,15 +19,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="175" column="35" selection-start-line="175" selection-start-column="35" selection-end-line="175" selection-end-column="35" />
+            <state relative-caret-position="444">
+              <caret line="192" column="40" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="40" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
-                <marker date="1545003485546" expanded="true" signature="1951:4653" ph="..." />
-                <marker date="1545003485546" expanded="true" signature="2067:2724" ph="..." />
-                <marker date="1545003485546" expanded="true" signature="2182:2187" ph="..." />
-                <marker date="1545003485546" expanded="true" signature="2182:2724" ph="..." />
-                <marker date="1545003485546" expanded="true" signature="2550:2724" ph="..." />
+                <marker date="1545151378366" expanded="true" signature="2164:5227" ph="..." />
+                <marker date="1545151378366" expanded="true" signature="2280:2937" ph="..." />
+                <marker date="1545151378366" expanded="true" signature="2395:2400" ph="..." />
+                <marker date="1545151378366" expanded="true" signature="2395:2937" ph="..." />
+                <marker date="1545151378366" expanded="true" signature="2763:2937" ph="..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +55,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="840" />
     <option name="y" value="23" />
-    <option name="width" value="1680" />
+    <option name="width" value="840" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -132,15 +133,16 @@
       <workItem from="1544739051507" duration="48000" />
       <workItem from="1544751199891" duration="2505000" />
       <workItem from="1544996458115" duration="186000" />
-      <workItem from="1545003230919" duration="255000" />
+      <workItem from="1545003230919" duration="470000" />
+      <workItem from="1545148961955" duration="1468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8193000" />
+    <option name="totallyTimeSpent" value="9876000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <frame x="840" y="23" width="840" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24812031" />
@@ -189,15 +191,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="175" column="35" selection-start-line="175" selection-start-column="35" selection-end-line="175" selection-end-column="35" />
+        <state relative-caret-position="444">
+          <caret line="192" column="40" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="40" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
-            <marker date="1545003485546" expanded="true" signature="1951:4653" ph="..." />
-            <marker date="1545003485546" expanded="true" signature="2067:2724" ph="..." />
-            <marker date="1545003485546" expanded="true" signature="2182:2187" ph="..." />
-            <marker date="1545003485546" expanded="true" signature="2182:2724" ph="..." />
-            <marker date="1545003485546" expanded="true" signature="2550:2724" ph="..." />
+            <marker date="1545151378366" expanded="true" signature="2164:5227" ph="..." />
+            <marker date="1545151378366" expanded="true" signature="2280:2937" ph="..." />
+            <marker date="1545151378366" expanded="true" signature="2395:2400" ph="..." />
+            <marker date="1545151378366" expanded="true" signature="2395:2937" ph="..." />
+            <marker date="1545151378366" expanded="true" signature="2763:2937" ph="..." />
           </folding>
         </state>
       </provider>
