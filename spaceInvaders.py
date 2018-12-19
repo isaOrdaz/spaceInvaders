@@ -34,9 +34,9 @@ game_over_pen = turtle.Turtle()
 game_over_pen.speed(0)
 game_over_pen.color("green")
 game_over_pen.penup()
-game_over_pen.setposition(0,0)
+game_over_pen.setposition(0, 0)
 game_over_pen.hideturtle()
-game_over_string = "You Win"
+game_over_string = "Next Level"
 
 # Set the score to 0
 score = 0
@@ -47,7 +47,7 @@ score_pen.speed(0)
 score_pen.color("white")
 score_pen.penup()
 score_pen.setposition(-290, 280)
-scorestring = "Score: %s" %score
+scorestring = "Score: %s" % score
 score_pen.write(scorestring, False, align="left", font=("Arial", 14, "normal"))
 score_pen.hideturtle()
 
@@ -172,7 +172,6 @@ while True:
             # Change Direction
             enemyspeed *= -1
 
-
         # Check for a collision between the bullet and the enemy
         if isCollision(bullet, enemy):
             os.system("afplay explosion.wav&")
@@ -187,22 +186,38 @@ while True:
                 enemy_hit = enemies.index(enemy)
                 del enemies[enemy_hit]
             if number_of_enemies == 0:
-                player.hideturtle()
                 enemy.hideturtle()
                 game_over_pen.write(game_over_string, False, align="center", font=("Arial", 14, "normal"))
-                mainScreen.exitonclick()
+                number_of_enemies = random.randint(5, 10)
+                for i in range(number_of_enemies):
+                    enemies.append(turtle.Turtle())
+                for e in enemies:
+                    # Create invader
+                    e.color("red")
+                    e.shape("invader.gif")
+                    e.penup()
+                    e.speed(0)
+                    x = random.randint(-200, 200)
+                    y = random.randint(100, 250)
+                    e.setposition(x, y)
+
+                enemyspeed = 2
+
             # Update the score
             score += 10
             scorestring = "Score: %s" % score
             score_pen.clear()
             score_pen.write(scorestring, False, align="left", font=("Arial", 14, "normal"))
-
+            game_over_pen.clear()
 
         if isCollision(enemy, player):
+            game_over_string = "Game Over"
+            game_over_pen.color("red")
             os.system("afplay explosion.wav&")
             player.hideturtle()
-            enemy.hideturtle()
-            print("Game Over")
+            for e in enemies:
+                del enemies[e]
+            game_over_pen.write(game_over_string, False, align="center", font=("Arial", 14, "normal"))
             break
 
     # Move bullet
