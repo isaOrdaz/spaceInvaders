@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba5b6106-6168-4e13-9742-290baaf804e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/invader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.gif" beforeDir="false" afterPath="$PROJECT_DIR$/player.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spaceInvaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/spaceInvaders.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,15 +21,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state relative-caret-position="509">
+              <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
-                <marker date="1545177045864" expanded="true" signature="2169:5914" ph="..." />
-                <marker date="1545177045864" expanded="true" signature="2285:2942" ph="..." />
-                <marker date="1545177045864" expanded="true" signature="2400:2405" ph="..." />
-                <marker date="1545177045864" expanded="true" signature="2400:2942" ph="..." />
-                <marker date="1545177045864" expanded="true" signature="2768:2942" ph="..." />
+                <marker date="1545185776684" expanded="true" signature="2167:5912" ph="..." />
+                <marker date="1545185776684" expanded="true" signature="2283:2940" ph="..." />
+                <marker date="1545185776684" expanded="true" signature="2398:2403" ph="..." />
+                <marker date="1545185776684" expanded="true" signature="2398:2940" ph="..." />
+                <marker date="1545185776684" expanded="true" signature="2766:2940" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,12 +137,12 @@
       <workItem from="1544996458115" duration="186000" />
       <workItem from="1545003230919" duration="470000" />
       <workItem from="1545148961955" duration="3841000" />
-      <workItem from="1545177010749" duration="770000" />
+      <workItem from="1545177010749" duration="1615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13019000" />
+    <option name="totallyTimeSpent" value="13864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="840" y="23" width="840" height="1027" extended-state="0" />
@@ -192,15 +194,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        <state relative-caret-position="509">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
-            <marker date="1545177045864" expanded="true" signature="2169:5914" ph="..." />
-            <marker date="1545177045864" expanded="true" signature="2285:2942" ph="..." />
-            <marker date="1545177045864" expanded="true" signature="2400:2405" ph="..." />
-            <marker date="1545177045864" expanded="true" signature="2400:2942" ph="..." />
-            <marker date="1545177045864" expanded="true" signature="2768:2942" ph="..." />
+            <marker date="1545185776684" expanded="true" signature="2167:5912" ph="..." />
+            <marker date="1545185776684" expanded="true" signature="2283:2940" ph="..." />
+            <marker date="1545185776684" expanded="true" signature="2398:2403" ph="..." />
+            <marker date="1545185776684" expanded="true" signature="2398:2940" ph="..." />
+            <marker date="1545185776684" expanded="true" signature="2766:2940" ph="..." />
           </folding>
         </state>
       </provider>
