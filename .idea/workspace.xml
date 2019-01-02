@@ -4,8 +4,6 @@
     <list default="true" id="ba5b6106-6168-4e13-9742-290baaf804e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/invader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.gif" beforeDir="false" afterPath="$PROJECT_DIR$/player.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spaceInvaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/spaceInvaders.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +19,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+            <state relative-caret-position="135">
+              <caret line="9" column="5" selection-start-line="9" selection-end-line="9" selection-end-column="5" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
-                <marker date="1545185776684" expanded="true" signature="2167:5912" ph="..." />
-                <marker date="1545185776684" expanded="true" signature="2283:2940" ph="..." />
-                <marker date="1545185776684" expanded="true" signature="2398:2403" ph="..." />
-                <marker date="1545185776684" expanded="true" signature="2398:2940" ph="..." />
-                <marker date="1545185776684" expanded="true" signature="2766:2940" ph="..." />
+                <marker date="1545676198083" expanded="true" signature="2167:5912" ph="..." />
+                <marker date="1545676198083" expanded="true" signature="2283:2940" ph="..." />
+                <marker date="1545676198083" expanded="true" signature="2398:2403" ph="..." />
+                <marker date="1545676198083" expanded="true" signature="2398:2940" ph="..." />
+                <marker date="1545676198083" expanded="true" signature="2766:2940" ph="..." />
               </folding>
             </state>
           </provider>
@@ -44,6 +42,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mainS</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -57,9 +60,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="840" />
     <option name="y" value="23" />
-    <option name="width" value="840" />
+    <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -137,15 +139,20 @@
       <workItem from="1544996458115" duration="186000" />
       <workItem from="1545003230919" duration="470000" />
       <workItem from="1545148961955" duration="3841000" />
-      <workItem from="1545177010749" duration="1615000" />
+      <workItem from="1545177010749" duration="1797000" />
+      <workItem from="1545676046112" duration="310000" />
+      <workItem from="1545698057032" duration="3000" />
+      <workItem from="1546043358486" duration="148000" />
+      <workItem from="1546043600385" duration="17000" />
+      <workItem from="1546043748183" duration="425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13864000" />
+    <option name="totallyTimeSpent" value="14949000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="23" width="840" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24812031" />
@@ -194,15 +201,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spaceInvaders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+        <state relative-caret-position="135">
+          <caret line="9" column="5" selection-start-line="9" selection-end-line="9" selection-end-column="5" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
-            <marker date="1545185776684" expanded="true" signature="2167:5912" ph="..." />
-            <marker date="1545185776684" expanded="true" signature="2283:2940" ph="..." />
-            <marker date="1545185776684" expanded="true" signature="2398:2403" ph="..." />
-            <marker date="1545185776684" expanded="true" signature="2398:2940" ph="..." />
-            <marker date="1545185776684" expanded="true" signature="2766:2940" ph="..." />
+            <marker date="1545676198083" expanded="true" signature="2167:5912" ph="..." />
+            <marker date="1545676198083" expanded="true" signature="2283:2940" ph="..." />
+            <marker date="1545676198083" expanded="true" signature="2398:2403" ph="..." />
+            <marker date="1545676198083" expanded="true" signature="2398:2940" ph="..." />
+            <marker date="1545676198083" expanded="true" signature="2766:2940" ph="..." />
           </folding>
         </state>
       </provider>
