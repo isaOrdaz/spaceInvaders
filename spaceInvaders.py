@@ -29,6 +29,9 @@ for side in range(4):
 
 borderPen.hideturtle()
 
+# game Over
+game_over_pen = turtle.Turtle()
+
 # Scoring
 score = 0
 ADDED_POINTS = 10 #default score when hit invader
@@ -53,7 +56,7 @@ player.setheading(90)
 playerSpeed = 15
 
 # Create Invaders
-numberOfInvaders = 5
+numberOfInvaders = random.randint(5, 10)
 # create empty list of invaders
 invaders = []
 
@@ -169,10 +172,31 @@ while True:
             bullet.hideturtle()
             bulletState = "ready"
             bullet.setposition(0, -400)
-            # reset invader
-            invaderX = random.randint(-200, 200)
-            invaderY = random.randint(100, 250)
-            invader.setposition(invaderX, invaderY)
+
+            # undate invaders list
+            if numberOfInvaders != 0:
+                # Delete enemy and update number
+                invader.reset()
+                numberOfInvaders -= 1
+                invader.hideturtle()
+            if numberOfInvaders == 0:
+                invader.hideturtle()
+                game_over_pen.write(game_over_string, False, align="center", font=("Arial", 14, "normal"))
+                numberOfInvaders = random.randint(5, 10)
+                for i in range(numberOfInvaders):
+                    invaders.append(turtle.Turtle())
+                for i in invaders:
+                    # Create invader
+                    i.color("red")
+                    i.shape("invader.gif")
+                    i.penup()
+                    i.speed(0)
+                    x = random.randint(-200, 200)
+                    y = random.randint(100, 250)
+                    i.setposition(x, y)
+
+                invaderSpeed = 2
+
             # update score
             score += ADDED_POINTS
             scoreString = "Score: %s" %score
