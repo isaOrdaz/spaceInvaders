@@ -8,6 +8,7 @@ import random
 window = turtle.Screen()
 window.bgcolor("black")
 window.title("Space Invaders")
+window.bgpic('/Users/isabel/PycharmProjects/spaceInvaders/space_invader.gif')
 
 # Screen border
 borderPen = turtle.Turtle()
