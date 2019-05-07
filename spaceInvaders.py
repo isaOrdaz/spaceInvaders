@@ -126,16 +126,40 @@ while True:
 
         # move invader down (boundry check)
         if invader.xcor() > 280:
-            invaderY = invader.ycor()
-            invaderY -= 40
+            for i in invaders:
+                # move them down
+                invaderY = i.ycor()
+                invaderY -= 40
+                i.sety(invaderY)
+            # change direction
             invaderSpeed *= -1
-            invader.sety(invaderY)
 
         if invader.xcor() < -280:
-            invaderY = invader.ycor()
-            invaderY -= 40
+            for i in invaders:
+                # move them down
+                invaderY = i.ycor()
+                invaderY -= 40
+                i.sety(invaderY)
+            # change direction
             invaderSpeed *= -1
-            invader.sety(invaderY)
+
+        # check for collision btwn invader and bullet
+        if isCollision(bullet, invader):
+            # reset bullet
+            bullet.hideturtle()
+            bulletState = "ready"
+            bullet.setposition(0, -400)
+            # reset invader
+            invaderX = random.randint(-200, 200)
+            invaderY = random.randint(100, 250)
+            invader.setposition(invaderX, invaderY)
+
+        # check for collision btwn invader and player
+        if isCollision(player, invader):
+            player.hideturtle()
+            invader.hideturtle()
+            print("Game Over")
+            break
 
     # move bullet
     if bulletState == "fire":
@@ -146,22 +170,6 @@ while True:
     if bullet.ycor() > 275:
         bullet.hideturtle()
         bulletState = "ready"
-
-    # check for collision btwn invader and bullet
-    if isCollision(bullet, invader):
-        # reset bullet
-        bullet.hideturtle()
-        bulletState = "ready"
-        bullet.setposition(0, -400)
-        # reset invader
-        invader.setposition(-200, 250)
-
-    # check for collision btwn invader and player
-    if isCollision(player, invader):
-        player.hideturtle()
-        invader.hideturtle()
-        print("Game Over")
-        break
 
 
 # Exit window
