@@ -30,7 +30,8 @@ for side in range(4):
 borderPen.hideturtle()
 
 # game Over
-game_over_pen = turtle.Turtle()
+gameOverPen = turtle.Turtle()
+gameOverString = "Game Over"
 
 # Scoring
 score = 0
@@ -177,38 +178,25 @@ while True:
             if numberOfInvaders != 0:
                 # Delete enemy and update number
                 invader.reset()
+                invader.clear()
                 numberOfInvaders -= 1
-                invader.hideturtle()
+                # invader.hideturtle()
             if numberOfInvaders == 0:
-                invader.hideturtle()
-                game_over_pen.write(game_over_string, False, align="center", font=("Arial", 14, "normal"))
-                numberOfInvaders = random.randint(5, 10)
-                for i in range(numberOfInvaders):
-                    invaders.append(turtle.Turtle())
-                for i in invaders:
-                    # Create invader
-                    i.color("red")
-                    i.shape("invader.gif")
-                    i.penup()
-                    i.speed(0)
-                    x = random.randint(-200, 200)
-                    y = random.randint(100, 250)
-                    i.setposition(x, y)
-
-                invaderSpeed = 2
+                gameOverPen.write(gameOverString, False, align="center", font=("Arial", 14, "normal"))
 
             # update score
             score += ADDED_POINTS
             scoreString = "Score: %s" %score
             scorePen.clear()
             scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
+            gameOverPen.clear()
 
         # check for collision btwn invader and player
         if isCollision(player, invader):
             os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             player.hideturtle()
             invader.hideturtle()
-            print("Game Over")
+            gameOverPen.write(gameOverString, False, align="center", font=("Arial", 14, "normal"))
             break
 
     # move bullet
