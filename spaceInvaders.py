@@ -24,6 +24,19 @@ for side in range(4):
 
 borderPen.hideturtle()
 
+# Scoring
+score = 0
+ADDED_POINTS = 10 #default score when hit invader
+
+scorePen = turtle.Turtle()
+scorePen.speed(0)
+scorePen.color("white")
+scorePen.penup()
+scorePen.setposition(-290, 280)
+scoreString = "Score: %s" %score
+scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
+scorePen.hideturtle()
+
 # Create player
 player = turtle.Turtle("triangle")
 player.color("blue")
@@ -153,6 +166,11 @@ while True:
             invaderX = random.randint(-200, 200)
             invaderY = random.randint(100, 250)
             invader.setposition(invaderX, invaderY)
+            # update score
+            score += ADDED_POINTS
+            scoreString = "Score: %s" %score
+            scorePen.clear()
+            scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
 
         # check for collision btwn invader and player
         if isCollision(player, invader):
