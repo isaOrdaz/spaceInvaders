@@ -110,6 +110,7 @@ def fireBullet():
     global bulletState
 
     if bulletState == "ready":
+        os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/laser.wav&")
         bulletState = "fire"
         # move bullet above player
         playerX = player.xcor()
@@ -163,6 +164,7 @@ while True:
 
         # check for collision btwn invader and bullet
         if isCollision(bullet, invader):
+            os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             # reset bullet
             bullet.hideturtle()
             bulletState = "ready"
@@ -179,6 +181,7 @@ while True:
 
         # check for collision btwn invader and player
         if isCollision(player, invader):
+            os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             player.hideturtle()
             invader.hideturtle()
             print("Game Over")
