@@ -10,6 +10,10 @@ window.bgcolor("black")
 window.title("Space Invaders")
 window.bgpic('/Users/isabel/PycharmProjects/spaceInvaders/space_invader.gif')
 
+# register shapes
+turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif")
+turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+
 # Screen border
 borderPen = turtle.Turtle()
 borderPen.speed(0)
@@ -39,7 +43,7 @@ scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
 scorePen.hideturtle()
 
 # Create player
-player = turtle.Turtle("triangle")
+player = turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
 player.color("blue")
 player.penup()
 player.speed(0)
@@ -56,7 +60,7 @@ invaders = []
 # add invaders to list
 for i in range(numberOfInvaders):
     # create invader
-    invaders.append(turtle.Turtle("circle"))
+    invaders.append(turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif"))
 
 for invader in invaders:
     invader.color("red")
