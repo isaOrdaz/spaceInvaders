@@ -2,6 +2,7 @@
 import turtle
 import os
 import math
+import random
 
 # Screen set up
 window = turtle.Screen()
@@ -34,11 +35,22 @@ player.setheading(90)
 playerSpeed = 15
 
 # Create Invaders
-invader = turtle.Turtle("circle")
-invader.color("red")
-invader.penup()
-invader.speed(0)
-invader.setposition(-200, 250)
+numberOfInvaders = 5
+# create empty list of invaders
+invaders = []
+
+# add invaders to list
+for i in range(numberOfInvaders):
+    # create invader
+    invaders.append(turtle.Turtle("circle"))
+
+for invader in invaders:
+    invader.color("red")
+    invader.penup()
+    invader.speed(0)
+    invaderX = random.randint(-200, 200)
+    invaderY = random.randint(100, 250)
+    invader.setposition(invaderX, invaderY)
 
 invaderSpeed = 2
 
@@ -106,23 +118,24 @@ turtle.onkey(fireBullet, "space")
 
 # Game loop
 while True:
-    # move invader
-    invaderX = invader.xcor()
-    invaderX += invaderSpeed
-    invader.setx(invaderX)
+    for invader in invaders:
+        # move invader
+        invaderX = invader.xcor()
+        invaderX += invaderSpeed
+        invader.setx(invaderX)
 
-    # move invader down (boundry check)
-    if invader.xcor() > 280:
-        invaderY = invader.ycor()
-        invaderY -= 40
-        invaderSpeed *= -1
-        invader.sety(invaderY)
+        # move invader down (boundry check)
+        if invader.xcor() > 280:
+            invaderY = invader.ycor()
+            invaderY -= 40
+            invaderSpeed *= -1
+            invader.sety(invaderY)
 
-    if invader.xcor() < -280:
-        invaderY = invader.ycor()
-        invaderY -= 40
-        invaderSpeed *= -1
-        invader.sety(invaderY)
+        if invader.xcor() < -280:
+            invaderY = invader.ycor()
+            invaderY -= 40
+            invaderSpeed *= -1
+            invader.sety(invaderY)
 
     # move bullet
     if bulletState == "fire":
