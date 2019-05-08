@@ -177,12 +177,14 @@ while True:
             # undate invaders list
             if numberOfInvaders != 0:
                 # Delete enemy and update number
+                invaders.remove(invader)
                 invader.reset()
                 invader.clear()
+                invader.hideturtle()
                 numberOfInvaders -= 1
-                # invader.hideturtle()
             if numberOfInvaders == 0:
                 gameOverPen.write(gameOverString, False, align="center", font=("Arial", 14, "normal"))
+                break
 
             # update score
             score += ADDED_POINTS
