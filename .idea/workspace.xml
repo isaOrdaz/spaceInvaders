@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ba5b6106-6168-4e13-9742-290baaf804e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spaceInvaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/spaceInvaders.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +119,7 @@
       <workItem from="1553614797442" duration="94000" />
       <workItem from="1579618968515" duration="26000" />
       <workItem from="1579645209906" duration="48000" />
+      <workItem from="1583181139345" duration="390000" />
     </task>
     <servers />
   </component>
