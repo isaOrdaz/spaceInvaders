@@ -9,11 +9,14 @@ import random
 window = turtle.Screen()
 window.bgcolor("black")
 window.title("Space Invaders")
-window.bgpic('/Users/isabel/PycharmProjects/spaceInvaders/space_invader.gif')
+# window.bgpic('/Users/isabel/PycharmProjects/spaceInvaders/space_invader.gif')
+window.bgpic('spaceInvaders-master\space_invader.gif')
 
 # register shapes
-turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif")
-turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+# turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif")
+turtle.register_shape('spaceInvaders-master\invader.gif')
+# turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+turtle.register_shape('spaceInvaders-master\player.gif')
 
 # Screen border
 borderPen = turtle.Turtle()
@@ -32,7 +35,11 @@ borderPen.hideturtle()
 
 # game Over
 gameOverPen = turtle.Turtle()
+gameOverPen.speed(0)
+gameOverPen.color("white")
+gameOverPen.penup()
 gameOverString = "Game Over"
+wonGameString = "You Won!"
 
 # Scoring
 score = 0
@@ -48,7 +55,8 @@ scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
 scorePen.hideturtle()
 
 # Create player
-player = turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+# player = turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+player = turtle.Turtle('spaceInvaders-master\player.gif')
 player.color("blue")
 player.penup()
 player.speed(0)
@@ -65,12 +73,15 @@ invaders = []
 # add invaders to list
 for i in range(numberOfInvaders):
     # create invader
-    invaders.append(turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif"))
+    # invaders.append(turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif"))
+    invaders.append(turtle.Turtle('spaceInvaders-master\invader.gif'))
+
+numberOfInvaders = len(invaders)
 
 for invader in invaders:
     invader.color("red")
     invader.penup()
-    invader.speed(0)
+    invader.speed(0) 
     invaderX = random.randint(-200, 200)
     invaderY = random.randint(100, 250)
     invader.setposition(invaderX, invaderY)
@@ -115,7 +126,7 @@ def fireBullet():
     global bulletState
 
     if bulletState == "ready":
-        os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/laser.wav&")
+        # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/laser.wav&")
         bulletState = "fire"
         # move bullet above player
         playerX = player.xcor()
@@ -169,7 +180,7 @@ while True:
 
         # check for collision btwn invader and bullet
         if isCollision(bullet, invader):
-            os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
+            # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             # reset bullet
             bullet.hideturtle()
             bulletState = "ready"
@@ -179,13 +190,10 @@ while True:
             if numberOfInvaders != 0:
                 # Delete enemy and update number
                 invaders.remove(invader)
-                invader.reset()
-                invader.clear()
                 invader.hideturtle()
                 numberOfInvaders -= 1
             if numberOfInvaders == 0:
-                gameOverPen.write(gameOverString, False, align="center", font=("Arial", 14, "normal"))
-                break
+                gameOverPen.write(wonGameString, False, align="center", font=("Arial", 14, "normal"))
 
             # update score
             score += ADDED_POINTS
@@ -196,7 +204,7 @@ while True:
 
         # check for collision btwn invader and player
         if isCollision(player, invader):
-            os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
+            # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             player.hideturtle()
             invader.hideturtle()
             gameOverPen.write(gameOverString, False, align="center", font=("Arial", 14, "normal"))
