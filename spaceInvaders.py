@@ -66,12 +66,12 @@ player.setheading(90)
 playerSpeed = 15
 
 # Create Invaders
-numberOfInvaders = random.randint(5, 10)
+numberOfInvaders = random.randint(5, 10) #random ints
 # create empty list of invaders
-invaders = []
+invaders = [] #lists
 
 # add invaders to list
-for i in range(numberOfInvaders):
+for i in range(numberOfInvaders): #for loops
     # create invader
     # invaders.append(turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif"))
     invaders.append(turtle.Turtle('spaceInvaders-master\invader.gif'))
@@ -105,7 +105,7 @@ bulletSpeed = 20
 bulletState = "ready"
 
 # Move player left and right
-def moveLeft():
+def moveLeft(): #functions
     playerX = player.xcor()
     playerX -= playerSpeed
     # boundry check
@@ -113,7 +113,7 @@ def moveLeft():
         playerX = -280
     player.setx(playerX)
 
-def moveRight():
+def moveRight(): #functions
     playerX = player.xcor()
     playerX += playerSpeed
     # boundry check
@@ -121,11 +121,11 @@ def moveRight():
         playerX = 280
     player.setx(playerX)
 
-def fireBullet():
+def fireBullet(): #functions
     # bullet state is global if it needs to change
     global bulletState
 
-    if bulletState == "ready":
+    if bulletState == "ready": #if else statements
         # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/laser.wav&")
         bulletState = "fire"
         # move bullet above player
@@ -135,7 +135,7 @@ def fireBullet():
         bullet.showturtle()
 
 # checking if bullet hit invader
-def isCollision(t1, t2):
+def isCollision(t1, t2): #fucntion
     distance = math.sqrt(math.pow(t1.xcor() - t2.xcor(), 2) + math.pow(t1.ycor() - t2.ycor(), 2))
 
     if distance < 15:
@@ -152,16 +152,16 @@ turtle.onkey(moveRight, "Right")
 turtle.onkey(fireBullet, "space")
 
 # Game loop
-while True:
-    for invader in invaders:
+while True: #whiles loops
+    for invader in invaders: #for loops
         # move invader
         invaderX = invader.xcor()
         invaderX += invaderSpeed
         invader.setx(invaderX)
 
         # move invader down (boundry check)
-        if invader.xcor() > 280:
-            for i in invaders:
+        if invader.xcor() > 280: #if else statements
+            for i in invaders: #for loops
                 # move them down
                 invaderY = i.ycor()
                 invaderY -= 40
@@ -169,8 +169,8 @@ while True:
             # change direction
             invaderSpeed *= -1
 
-        if invader.xcor() < -280:
-            for i in invaders:
+        if invader.xcor() < -280: #if else statements
+            for i in invaders: #for loops
                 # move them down
                 invaderY = i.ycor()
                 invaderY -= 40
@@ -179,7 +179,7 @@ while True:
             invaderSpeed *= -1
 
         # check for collision btwn invader and bullet
-        if isCollision(bullet, invader):
+        if isCollision(bullet, invader): #if else statements
             # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             # reset bullet
             bullet.hideturtle()
@@ -187,12 +187,12 @@ while True:
             bullet.setposition(0, -400)
 
             # undate invaders list
-            if numberOfInvaders != 0:
+            if numberOfInvaders != 0: #if else statements
                 # Delete enemy and update number
                 invaders.remove(invader)
                 invader.hideturtle()
                 numberOfInvaders -= 1
-            if numberOfInvaders == 0:
+            if numberOfInvaders == 0: #if else statements
                 gameOverPen.write(wonGameString, False, align="center", font=("Arial", 14, "normal"))
 
             # update score
@@ -203,7 +203,7 @@ while True:
             gameOverPen.clear()
 
         # check for collision btwn invader and player
-        if isCollision(player, invader):
+        if isCollision(player, invader): #if else statements
             # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             player.hideturtle()
             invader.hideturtle()
@@ -211,12 +211,12 @@ while True:
             break
 
     # move bullet
-    if bulletState == "fire":
+    if bulletState == "fire": #if else statments  
         bulletY = bullet.ycor()
         bulletY += bulletSpeed
         bullet.sety(bulletY)
     # bullet boundries
-    if bullet.ycor() > 275:
+    if bullet.ycor() > 275: #if else statements
         bullet.hideturtle()
         bulletState = "ready"
 
