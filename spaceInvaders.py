@@ -9,84 +9,86 @@ import random
 window = turtle.Screen()
 window.bgcolor("black")
 window.title("Space Invaders")
-# window.bgpic('/Users/isabel/PycharmProjects/spaceInvaders/space_invader.gif')
-window.bgpic('spaceInvaders-master\space_invader.gif')
+window.bgpic('/Users/isabel/PycharmProjects/spaceInvaders/space_invader.gif')
+# window.bgpic('spaceInvaders-master\space_invader.gif')
 
 # register shapes
-# turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif")
-turtle.register_shape('spaceInvaders-master\invader.gif')
-# turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
-turtle.register_shape('spaceInvaders-master\player.gif')
+turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif")
+# turtle.register_shape('spaceInvaders-master\invader.gif')
+turtle.register_shape("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+# turtle.register_shape('spaceInvaders-master\player.gif')
 
 # Screen border
-borderPen = turtle.Turtle()
-borderPen.speed(0)
-borderPen.color("white")
-borderPen.penup()
-borderPen.setposition(-300, -300)
-borderPen.pendown()
-borderPen.pensize(3)
+border_pen = turtle.Turtle()
+border_pen.speed(0)
+border_pen.color("white")
+border_pen.penup()
+border_pen.setposition(-300, -300)
+border_pen.pendown()
+border_pen.pensize(3)
+
 # loop draws border
 for side in range(4):
-    borderPen.fd(600)
-    borderPen.left(90)
+    border_pen.fd(600)
+    border_pen.left(90)
 
-borderPen.hideturtle()
+# border_pen.hideturtle()
 
 # game Over
-gameOverPen = turtle.Turtle()
-gameOverPen.speed(0)
-gameOverPen.color("white")
-gameOverPen.penup()
-gameOverString = "Game Over"
-wonGameString = "You Won!"
+game_over_pen = turtle.Turtle()
+game_over_pen.speed(0)
+game_over_pen.color("white")
+game_over_pen.penup()
+game_over_string = "Game Over"
+won_game_string = "You Won!"
+game_over_pen.hideturtle()
 
 # Scoring
 score = 0
-ADDED_POINTS = 10 #default score when hit invader
+ADDED_POINTS = 10 # default score when hit invader
 
-scorePen = turtle.Turtle()
-scorePen.speed(0)
-scorePen.color("white")
-scorePen.penup()
-scorePen.setposition(-290, 280)
-scoreString = "Score: %s" %score
-scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
-scorePen.hideturtle()
+score_pen = turtle.Turtle()
+score_pen.speed(0)
+score_pen.color("white")
+score_pen.penup()
+score_pen.setposition(-290, 280)
+score_string = "Score: %s" % score
+score_pen.write(score_string, False, align="left", font=("Arial", 14, "normal"))
+score_pen.hideturtle()
 
 # Create player
-# player = turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
-player = turtle.Turtle('spaceInvaders-master\player.gif')
+player = turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/player.gif")
+# player = turtle.Turtle('spaceInvaders-master\player.gif')
 player.color("blue")
 player.penup()
 player.speed(0)
 player.setposition(0, -250)
 player.setheading(90)
 
-playerSpeed = 15
+player_speed = 15
 
 # Create Invaders
-numberOfInvaders = random.randint(5, 10) #random ints
+number_of_invaders = random.randint(5, 10)  # random ints
 # create empty list of invaders
-invaders = [] #lists
+invaders = []  # lists
 
 # add invaders to list
-for i in range(numberOfInvaders): #for loops
+for i in range(number_of_invaders):  # for loops
     # create invader
-    # invaders.append(turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif"))
-    invaders.append(turtle.Turtle('spaceInvaders-master\invader.gif'))
+    invaders.append(turtle.Turtle("/Users/isabel/PycharmProjects/spaceInvaders/invader.gif"))
+    # invaders.append(turtle.Turtle('spaceInvaders-master\invader.gif'))
 
-numberOfInvaders = len(invaders)
+number_of_invaders = len(invaders)
 
 for invader in invaders:
     invader.color("red")
     invader.penup()
-    invader.speed(0) 
+    invader.speed(0)
     invaderX = random.randint(-200, 200)
     invaderY = random.randint(100, 250)
     invader.setposition(invaderX, invaderY)
 
-invaderSpeed = 2
+invader_speed = 2
 
 # player bullet
 bullet = turtle.Turtle("triangle")
@@ -97,45 +99,49 @@ bullet.setheading(90)
 bullet.shapesize(0.5, 0.5)
 bullet.hideturtle()
 
-bulletSpeed = 20
+bullet_speed = 20
 
 # bullet states
 # ready - ready to fire
 # fire - bullet is fired and moving
-bulletState = "ready"
+bullet_state = "ready"
+
 
 # Move player left and right
-def moveLeft(): #functions
-    playerX = player.xcor()
-    playerX -= playerSpeed
-    # boundry check
-    if playerX < -280:
-        playerX = -280
-    player.setx(playerX)
+def move_left():  # functions
+    player_x = player.xcor()
+    player_x -= player_speed
+    # boundary check
+    if player_x < -280:
+        player_x = -280
+    player.setx(player_x)
 
-def moveRight(): #functions
-    playerX = player.xcor()
-    playerX += playerSpeed
-    # boundry check
-    if playerX > 280:
-        playerX = 280
-    player.setx(playerX)
 
-def fireBullet(): #functions
+def move_right():  # functions
+    player_x = player.xcor()
+    player_x += player_speed
+    # boundary check
+    if player_x > 280:
+        player_x = 280
+    player.setx(player_x)
+
+
+def fire_bullet():  # functions
     # bullet state is global if it needs to change
-    global bulletState
+    global bullet_state
 
-    if bulletState == "ready": #if else statements
-        # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/laser.wav&")
-        bulletState = "fire"
+    if bullet_state == "ready":  # if else statements
+        os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/laser.wav&")
+        bullet_state = "fire"
         # move bullet above player
-        playerX = player.xcor()
-        playerY = player.ycor() + 10
-        bullet.setposition(playerX, playerY)
+        player_x = player.xcor()
+        player_y = player.ycor() + 10
+        bullet.setposition(player_x, player_y)
         bullet.showturtle()
 
+
 # checking if bullet hit invader
-def isCollision(t1, t2): #fucntion
+def is_collision(t1, t2):  # function
     distance = math.sqrt(math.pow(t1.xcor() - t2.xcor(), 2) + math.pow(t1.ycor() - t2.ycor(), 2))
 
     if distance < 15:
@@ -143,83 +149,95 @@ def isCollision(t1, t2): #fucntion
     else:
         return False
 
+
+def end_game():
+    if number_of_invaders == 0:
+        return True
+
+
 # Keyboard Bindings
 turtle.listen()
 # player movement
-turtle.onkey(moveLeft, "Left")
-turtle.onkey(moveRight, "Right")
+turtle.onkey(move_left, "Left")
+turtle.onkey(move_right, "Right")
 # bullet shooter
-turtle.onkey(fireBullet, "space")
+turtle.onkey(fire_bullet, "space")
 
 # Game loop
-while True: #whiles loops
-    for invader in invaders: #for loops
+while True:  # whiles loops
+    for invader in invaders:  # for loops
         # move invader
-        invaderX = invader.xcor()
-        invaderX += invaderSpeed
-        invader.setx(invaderX)
+        invader_x = invader.xcor()
+        invader_x += invader_speed
+        invader.setx(invader_x)
 
         # move invader down (boundry check)
-        if invader.xcor() > 280: #if else statements
-            for i in invaders: #for loops
+        if invader.xcor() > 280:  # if else statements
+            for i in invaders:  # for loops
                 # move them down
-                invaderY = i.ycor()
-                invaderY -= 40
-                i.sety(invaderY)
+                invader_y = i.ycor()
+                invader_y -= 40
+                i.sety(invader_y)
             # change direction
-            invaderSpeed *= -1
+            invader_speed *= -1
 
-        if invader.xcor() < -280: #if else statements
-            for i in invaders: #for loops
+        if invader.xcor() < -280:  # if else statements
+            for i in invaders:  # for loops
                 # move them down
-                invaderY = i.ycor()
-                invaderY -= 40
-                i.sety(invaderY)
+                invader_y = i.ycor()
+                invader_y -= 40
+                i.sety(invader_y)
             # change direction
-            invaderSpeed *= -1
+            invader_speed *= -1
 
         # check for collision btwn invader and bullet
-        if isCollision(bullet, invader): #if else statements
-            # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
+        if is_collision(bullet, invader):  # if else statements
+            os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             # reset bullet
             bullet.hideturtle()
-            bulletState = "ready"
+            bullet_state = "ready"
             bullet.setposition(0, -400)
 
-            # undate invaders list
-            if numberOfInvaders != 0: #if else statements
+            # update invaders list
+            if number_of_invaders != 0:  # if else statements
                 # Delete enemy and update number
                 invaders.remove(invader)
                 invader.hideturtle()
-                numberOfInvaders -= 1
-            if numberOfInvaders == 0: #if else statements
-                gameOverPen.write(wonGameString, False, align="center", font=("Arial", 14, "normal"))
+                number_of_invaders -= 1
 
             # update score
             score += ADDED_POINTS
-            scoreString = "Score: %s" %score
-            scorePen.clear()
-            scorePen.write(scoreString, False, align="left", font=("Arial", 14, "normal"))
-            gameOverPen.clear()
+            score_string = "Score: %s" % score
+            score_pen.clear()
+            score_pen.write(score_string, False, align="left", font=("Arial", 14, "normal"))
+            game_over_pen.clear()
 
         # check for collision btwn invader and player
-        if isCollision(player, invader): #if else statements
-            # os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
+        if is_collision(player, invader):  # if else statements
+            os.system("afplay /Users/isabel/PycharmProjects/spaceInvaders/explosion.wav&")
             player.hideturtle()
             invader.hideturtle()
-            gameOverPen.write(gameOverString, False, align="center", font=("Arial", 14, "normal"))
+            game_over_pen.write(game_over_string, False, align="center", font=("Arial", 14, "normal"))
+            break
+
+        if end_game():
+            game_over_pen.write(won_game_string, False, align="center", font=("Ariel", 14, "normal"))
+            turtle.done()
             break
 
     # move bullet
-    if bulletState == "fire": #if else statments  
-        bulletY = bullet.ycor()
-        bulletY += bulletSpeed
-        bullet.sety(bulletY)
-    # bullet boundries
-    if bullet.ycor() > 275: #if else statements
+    if bullet_state == "fire":  # if else statements
+        bullet_y = bullet.ycor()
+        bullet_y += bullet_speed
+        bullet.sety(bullet_y)
+    # bullet boundaries
+    if bullet.ycor() > 275:  # if else statements
         bullet.hideturtle()
-        bulletState = "ready"
-
+        bullet_state = "ready"
 
 # Exit window
 window.exitonclick()
+
+# go out one border come out the other
+# go up and down
+# miss invader comes back from the top

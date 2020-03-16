@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba5b6106-6168-4e13-9742-290baaf804e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spaceInvaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/spaceInvaders.py" afterDir="false" />
     </list>
@@ -36,11 +37,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="RunManager">
     <configuration name="spaceInvaders" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -119,7 +121,9 @@
       <workItem from="1553614797442" duration="94000" />
       <workItem from="1579618968515" duration="26000" />
       <workItem from="1579645209906" duration="48000" />
-      <workItem from="1583181139345" duration="390000" />
+      <workItem from="1583181139345" duration="663000" />
+      <workItem from="1583525455962" duration="605000" />
+      <workItem from="1583526091759" duration="5409000" />
     </task>
     <servers />
   </component>
@@ -127,24 +131,48 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1579645257637">
+    <state x="440" y="202" key="#Inspections" timestamp="1583526573369">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579645257637" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1579645257636">
+    <state x="440" y="202" key="#Inspections/0.23.1680.1027@0.23.1680.1027" timestamp="1583526573369" />
+    <state width="1638" height="345" key="GridCell.Tab.0.bottom" timestamp="1583531802886">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579645257636" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1579645257636">
+    <state width="1638" height="345" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802886" />
+    <state width="1638" height="345" key="GridCell.Tab.0.center" timestamp="1583531802886">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579645257636" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1579645257637">
+    <state width="1638" height="345" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802886" />
+    <state width="1638" height="345" key="GridCell.Tab.0.left" timestamp="1583531802885">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579645257637" />
+    <state width="1638" height="345" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802885" />
+    <state width="1638" height="345" key="GridCell.Tab.0.right" timestamp="1583531802886">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802886" />
+    <state width="1638" height="345" key="GridCell.Tab.1.bottom" timestamp="1583531802888">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802888" />
+    <state width="1638" height="345" key="GridCell.Tab.1.center" timestamp="1583531802887">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802887" />
+    <state width="1638" height="345" key="GridCell.Tab.1.left" timestamp="1583531802887">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802887" />
+    <state width="1638" height="345" key="GridCell.Tab.1.right" timestamp="1583531802887">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="345" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1583531802887" />
+    <state x="341" y="175" key="SettingsEditor" timestamp="1583527673775">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1583527673775" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/spaceInvaders$spaceInvaders.coverage" NAME="spaceInvaders Coverage Results" MODIFIED="1579645212615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spaceInvaders$spaceInvaders.coverage" NAME="spaceInvaders Coverage Results" MODIFIED="1583531370778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
